@@ -37,7 +37,7 @@ def main() :
         draw = ImageDraw.Draw(image) # creates drawing object
         draw.text((10, 10), "hello world!", fill=0) # the first tuple is the start xy cord, the string is the text, and the fill is color with 0 meaning black
         draw.text((10, 40), "prize pics", fill = 0)
-        draw.text((10, 70), "cool", fill = 0)
+        draw.text((10, 70), "*" * 380 , fill = 0)
         draw.rectangle((10, 100, 100, 290), outline = 0, width = 3) # the 4-tuple is the corners: first is the top left, second is the bottom left
         draw.ellipse((120, 100, 390, 290), outline = 0, width = 5)
         draw.line((10, 170, 390, 290), fill = 0, width = 6)
