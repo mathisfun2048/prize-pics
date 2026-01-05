@@ -25,7 +25,7 @@ def main() :
 
     try: # we're going to make a try catch block so that control c can stop this
 
-        print("\n 1. initializing display") 
+        print("1. initializing display") 
         epd.init() # initializes e-ink
 
         print("2. clearnign display")
@@ -35,12 +35,12 @@ def main() :
         print("3. test >:)")
         image = Image.new("1", (400, 300), 255) # creates pillow image: 1 menas black and white, the tuple sets dimensions, and 255 makes the background white
         draw = ImageDraw.Draw(image) # creates drawing object
-        draw.text((10, 10), "E-Ink Display Test", fill=0) # the first tuple is the start xy cord, the string is the text, and the fill is color with 0 meaning black
+        draw.text((10, 10), "hello world!", fill=0) # the first tuple is the start xy cord, the string is the text, and the fill is color with 0 meaning black
         draw.text((10, 40), "prize pics", fill = 0)
-        draw.text((10, 70), "hello world!", fill = 0)
+        draw.text((10, 70), "cool", fill = 0)
         draw.rectangle((10, 100, 100, 150), outline = 0, width = 3) # the 4-tuple is the corners: first is the top left, second is the bottom left
-        draw.ellipse((120, 100, 170, 150), outline = 0, width = 5)
-        draw.line((10, 170, 150, 170), fill = 0, width = 6)
+        draw.ellipse((120, 100, 170, 390), outline = 0, width = 5)
+        draw.line((10, 170, 390, 290), fill = 0, width = 6)
 
         print("4. displaying image")
         epd.display(epd.getbuffer(image)) # converts image object to a byte buffer
@@ -69,4 +69,3 @@ def main() :
     
 if __name__ == "__main__":
     main()
-
