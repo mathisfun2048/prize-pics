@@ -4,7 +4,19 @@
 
 First I would recommend starting with a fresh install of RPi OS with a new SD card. So do that. 
 
-RPi came out with a great remote desktop (that is free!) which should make developing this easier. 
+RPi came out with a great remote desktop (that is free!) which should make developing this easier.
+
+## Turn SPI on!
+
+The E-Ink I chose for this project uses SPI to communicate between the display and the RPi. To make sure that can happen, we have to turn SPI on. Here's how you can do that:
+
+``` sudo raspi-config ```
+
+Then with the GUI, click Interfacing Options -> SPI -> Yes 
+
+After, we have to reboot our pi for this to take effect. 
+
+``` sudo reboot ```
 
 ## Hardware Check
 
