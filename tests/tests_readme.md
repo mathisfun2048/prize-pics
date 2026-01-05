@@ -39,3 +39,5 @@ This tests the button.
 ```
 sudo python3 test_button.py
 ```
+
+### Expected output
