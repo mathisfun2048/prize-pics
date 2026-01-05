@@ -24,3 +24,10 @@ Somehting really annoying about pushing files from your RPi to github is that yo
 github -> settings -> developer settings ->  personal access tokens -> tokens -> generate new token
 
 ** Make sure you copy this token! If you don't you'll have to make a new one!
+
+Also, if you havn't set up your git email and name, it might prompt you to do that. Type these to set those up:
+
+```
+ git config --global user.email "<YOUR EMAIL>"
+
+  git config --global user.name "<YOUR NAME>"
