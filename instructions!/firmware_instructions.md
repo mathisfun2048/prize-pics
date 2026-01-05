@@ -173,8 +173,48 @@ Now that you ensured your E-Ink works and is not a lemon, look in hardware instr
 
 ## Clone the Repo
 
+All the following steps are going to be assuming you *didn't* check you e-ink because that is a lot of work, and if you know it works you know it works. 
+
+First, clone the repo. 
+
 ``` 
 git clone https://github.com/mathisfun2048/prize-pics
 ```
 
+By cloning this, you get access to all the code, libraries, and a requirements.txt on what you need to install. 
 
+## Install Dependencies
+
+To install the dependencies, you need to first setup a python virtual environment. 
+
+``` 
+python3 -m venv venv 
+```
+(if you already made one from the e-ink test, you can skip this)
+
+now activate it 
+
+``` 
+source venv/bin/activate
+```
+(even if you made one from e-ink test, you should do this to enter your venv)
+
+Now install the dependencies. 
+```
+pip install -r requirements.txt
+```
+
+you might notice that instead of pil we used pillow in our requirements. This is because pillow is just the more modern version of pil, and works just the same. 
+
+## GPIO Perms
+If you remember from the e-ink test, we needed to exit our venv so we could access gpio. Another way we can do that is by adding you to the gpio group
+
+```
+sudo usermod -a -G gpio $USER
+```
+
+For this to take effect, you should reboot. 
+
+```
+sudo reboot
+```
