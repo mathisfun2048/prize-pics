@@ -17,3 +17,10 @@ This is because when you install a fresh copy of raspberian on a board you used 
 
 ``` sh-keygen -R <IP ADDRESS> ```
 
+## pushing files from rpi to github
+
+Somehting really annoying about pushing files from your RPi to github is that you need to enter your username and password. However, you don't enter your password! You need to enter a personal access token!. The way you can get one is:
+
+github -> settings -> developer settings ->  personal access tokens -> tokens -> generate new token
+
+** Make sure you copy this token! If you don't you'll have to make a new one!
