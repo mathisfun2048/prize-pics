@@ -9,6 +9,6 @@ __file__ is the location of this script
 lib means access lib folder
 insert(0, ...) means that this is the first place python looks for imports
 
-These together makes iporting the waveshare library a whole lot easier
+These together makes importing the waveshare library easier
 '''
 
