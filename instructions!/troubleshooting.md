@@ -16,3 +16,4 @@ Someone could be eavesdropping on you right now (man-in-the-middle attack)!
 This is because when you install a fresh copy of raspberian on a board you used for a different project, your ip address **won't** change, but your host name might. That is what causes this error. To fix, you need authorize that ip address with the following command: 
 
 ``` sh-keygen -R <IP ADDRESS> ```
+
