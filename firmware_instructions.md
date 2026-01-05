@@ -118,8 +118,13 @@ You can check this worked properly by accessing teh rpi via hdmi. This way, you 
 
 Now, connect the VCC wire to 3v3. 
 
+now we'll exit teh virtual envrionment
+
+``` deactivate``` 
+
 Now run. 
 
 ``` python3 epd_4in2_V2_test.py ```
 
-fds
+
+If the test worked successfully, you should see teh e-ink update and go through a test sequence. Congrats! You worked you e-ink!
