@@ -12,3 +12,5 @@ insert(0, ...) means that this is the first place python looks for imports
 These together makes importing the waveshare library easier
 '''
 
+from waveshare_epd import epd4in2_V2 # this is tfdshe library!
+

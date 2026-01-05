@@ -4,4 +4,4 @@ numpy
 spidev
 gpiozero
 pillow.heif
-pil
+PIL
