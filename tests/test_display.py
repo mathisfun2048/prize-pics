@@ -39,7 +39,7 @@ def main() :
         draw.text((10, 40), "prize pics", fill = 0)
         draw.text((10, 70), "hello world!", fill = 0)
         draw.rectangle((10, 100, 100, 150), outline = 0, width = 3) # the 4-tuple is the corners: first is the top left, second is the bottom left
-        draw.elipse((120, 100, 170, 150), outline = 0, width = 5)
+        draw.ellipse((120, 100, 170, 150), outline = 0, width = 5)
         draw.line((10, 170, 150, 170), fill = 0, width = 6)
 
         print("4. displaying image")
