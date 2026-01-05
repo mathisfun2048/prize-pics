@@ -21,3 +21,9 @@ If you're developing the program first on a breadboard, I recomend making sure t
 |RST      | 17   | 11                 |
 |BUSY     | 24   | 18                 |
 
+
+Here's a reminder of what pin is what for RPis! This layout is consistant for all RPi boards with 40 pins. 
+
+https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Flearn.sparkfun.com%2Ftutorials%2Fintroduction-to-the-raspberry-pi-gpio-and-physical-computing%2Fgpio-pins-overview&ved=0CBUQjRxqFwoTCIj95NzZ85EDFQAAAAAdAAAAABAH&opi=89978449<img width="2064" height="1185" alt="image" src="https://github.com/user-attachments/assets/4d8ac120-e9af-44b6-bb69-23b28b07faca" />
+
+
