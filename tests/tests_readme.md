@@ -40,4 +40,11 @@ This tests the button.
 sudo python3 test_button.py
 ```
 
+
 ### Expected output
+
+<img width="379" height="204" alt="Screenshot 2026-01-05 at 4 58 10 PM" src="https://github.com/user-attachments/assets/4879593d-c91b-4fdc-9ec9-42ed38131942" />
+
+
+
+
