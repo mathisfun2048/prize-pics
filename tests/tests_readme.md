@@ -2,6 +2,9 @@
 
 This is just documentation for all the tests so that you can troubleshoot as needed
 
+for running thise, make sure you're on the test directory
+
+
 ## test_display.py
 
 ### What it Does
@@ -15,16 +18,24 @@ Make sure that you have the dependencies installed beforehand. There is document
 
 ### Running It
 
-on terminal, go to the test directory
-
-then run
-
 ```
 sudo python3 test_display.py
 ```
 
-we need sudo bc of gpio permissions
-
 ### Expected output
 
 <img width="633" height="576" alt="Screenshot 2026-01-05 at 3 23 52 PM" src="https://github.com/user-attachments/assets/b06bf7da-ed32-4f1a-969a-63acabb75550" />
+
+## test_button.py
+
+## What it Does
+This tests the functionality of the button. Its an easy way to test if you soldered everything correctly. 
+
+### What it tests
+This tests the button. 
+
+### Running it
+
+```
+sudo python3 test_button.py
+```
