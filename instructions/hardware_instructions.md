@@ -7,5 +7,24 @@
 - sd card
 - 2 bulk capacitors
 - 2 low pass filter capacitors
+- button 
+
+## Connections
+
+Follow the pcb schematics!
+
+|E-Ink Pin| GPIO | Physical Pin Number|
+|---------|------|--------------------|
+|VCC      | 3.3V | 1                  |
+|GND      | GND  | 6                  |
+|DIN      | MOSI | 19                 |
+|CLK      | SCLK | 23                 |
+|CS       | CE0  | 24                 |
+|DC       | 25   | 22                 |
+|RST      | 17   | 11                 |
+|BUSY     | 24   | 18                 |
+
+button connected to physical pin 12 / gpio 18
+
 
 
