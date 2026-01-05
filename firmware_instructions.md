@@ -166,3 +166,7 @@ python3 epd_4in2_V2_test.py
 
 
 If the test worked successfully, you should see teh e-ink update and go through a test sequence. Congrats! You worked you e-ink!
+
+### Step 6 (optional): Soldering / Prototyping
+
+Now that you ensured your E-Ink works and is not a lemon, look in hardware instructions in #hardware_instructions.md to build the device. Once that is done, we can move forward in cloning this repo and setting up the services to make prize pics work. 
