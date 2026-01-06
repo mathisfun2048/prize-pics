@@ -105,3 +105,4 @@ pre-rec: there needs to be an image in the queue directory
 ```
 sudo python3 test_full_pipeline.py
 ```
+### Expected Output:
