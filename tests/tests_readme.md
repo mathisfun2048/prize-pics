@@ -74,4 +74,16 @@ this on the terminal:
 ## test_display_image_processor.py
 
 ### what it does
-This tests whether our image processor is working correctly. It does so by doing the following:
+This tests whether our image processor is working correctly. It does so by first making a test image with gradient and text and shapes, and then calls various dithering algorihtms on there. The output should be 1) the image generated and 2) 4 dithered images with each algoirhtm called on it
+
+### What it Tests
+Thsi tests the image processor
+
+### Running it 
+
+```
+sudo python3 test_image_processor.py
+```
+
+### Expected Output:
+
