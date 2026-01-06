@@ -62,7 +62,9 @@ sudo python3 test_display_controller.py
 ### Expected Output
 
 this on the e-ink:
-<img width="379" height="204" alt="Screenshot 2026-01-05 at 4 58 10 PM" src="https://github.com/user-attachments/assets/4879593d-c91b-4fdc-9ec9-42ed38131942" />
+
+<img width="633" height="576" alt="Screenshot 2026-01-05 at 3 23 52 PM" src="https://github.com/user-attachments/assets/b06bf7da-ed32-4f1a-969a-63acabb75550" />
+
 
 this on the terminal:
 
