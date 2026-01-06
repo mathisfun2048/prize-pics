@@ -10,7 +10,7 @@ def main():
     print("lets see if the pipeline works")
     print("*"*50)
 
-    image_path = os.path.join(os.path.dirme(__file__), "..", "images", "queue", "test.png")
+    image_path = os.path.join(os.path.dirname(__file__), "..", "images", "queue", "test.png")
     
     if not os.path.exists(image_path):
         print(f"error with test image with path {image_path}")
