@@ -13,7 +13,7 @@ def create_test_image():
         gray = i
         draw.rectangle([(i*3, 0), (i*3+3, 200)], fill=(gray, gray, gray))
     draw.text((50, 250), "testing!", fill = "black")
-    draw.elipse([(50, 300), (250, 500)], fill = "gray")
+    draw.ellipse([(50, 300), (250, 500)], fill = "gray")
     draw.rectangle([(300, 300), (500, 500)], fill = "darkgray")
 
     test_img_path = os.path.join(os.path.dirname(__file__), "..", "images", "test_gradient.png")
