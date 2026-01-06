@@ -41,10 +41,29 @@ sudo python3 test_button.py
 ```
 
 
-### Expected output
+### Expected Output
 
 <img width="379" height="204" alt="Screenshot 2026-01-05 at 4 58 10 PM" src="https://github.com/user-attachments/assets/4879593d-c91b-4fdc-9ec9-42ed38131942" />
 
+## test_display_controller.py
 
+### What it Does
+This tests if the class is properly wrapping the e-ink. 
+
+### What it tests
+This tests the wrapper class, which makes interacting with the e-ink easier. 
+
+### Running it
+
+```
+sudo python3 test_display_controller.py
+```
+
+### Expected Output
+
+this on the e-ink:
+<img width="379" height="204" alt="Screenshot 2026-01-05 at 4 58 10 PM" src="https://github.com/user-attachments/assets/4879593d-c91b-4fdc-9ec9-42ed38131942" />
+
+this on the terminal:
 
 
