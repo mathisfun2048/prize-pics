@@ -36,7 +36,7 @@ class ImageProcessor:
                 img = img.convert("RGB")
             
             if img.width != 400 and img.height != 300:
-                img = self.resize_maintain_aspect(img) # implment this function later lol
+                img = self.resize_maintain_aspect(img) 
                 logger.info(f"resized image") 
 
             if contrast != 1.0:
@@ -56,9 +56,7 @@ class ImageProcessor:
 
             img = img.convert("L")
 
-            img = self.apply_dither(img, dither_mode) # implement this function later lol
-            logger.info("applied dithering")
-
+            img = self.apply_dither(img, dither_mode) 
             logger.info("finished processing")
             return img
         except Exception as e:
