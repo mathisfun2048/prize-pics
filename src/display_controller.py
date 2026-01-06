@@ -19,7 +19,7 @@ class eink:
     
     def init(self):
         try:
-            if not self.EPD:
+            if not self.epd:
                 self.epd = epd4in2_V2.EPD()
             
             logger.info("initalizing")
