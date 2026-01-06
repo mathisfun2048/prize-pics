@@ -86,4 +86,10 @@ sudo python3 test_image_processor.py
 ```
 
 ### Expected Output:
+<img width="818" height="615" alt="Screenshot 2026-01-06 at 1 33 19 PM" src="https://github.com/user-attachments/assets/73f3df6d-061c-4f3c-9d32-92182480d626" />
+
+<img width="438" height="346" alt="image" src="https://github.com/user-attachments/assets/7be061bf-ebe9-4866-8ec5-6c452d09dbb6" />
+
+
+
 
