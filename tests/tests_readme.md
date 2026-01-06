@@ -98,11 +98,21 @@ this tests the image pipeline I want to have: the user inputs a image in teh que
 ### what it tests
 the image processing pipeline from user image to display
 
-pre-rec: there needs to be an image in the queue directory
+ ** pre-rec: there needs to be an image in the queue directory named test.png **
 
 ### Running It
 
 ```
 sudo python3 test_full_pipeline.py
 ```
+
 ### Expected Output:
+
+The picture I inputted:
+
+<img width="815" height="609" alt="image" src="https://github.com/user-attachments/assets/78727249-3288-43fa-a980-638e3b0eb564" />
+
+The picture that got ouputted:
+<img width="498" height="541" alt="Screenshot 2026-01-06 at 4 15 35 PM" src="https://github.com/user-attachments/assets/ea81e696-0304-4bb4-981b-22c46f8c698d" />
+
+** picture will vary based on what you input**
