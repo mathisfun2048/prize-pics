@@ -90,6 +90,18 @@ sudo python3 test_image_processor.py
 
 <img width="438" height="346" alt="image" src="https://github.com/user-attachments/assets/7be061bf-ebe9-4866-8ec5-6c452d09dbb6" />
 
+## test_full_pipeline.py
 
+### What it Does
+this tests the image pipeline I want to have: the user inputs a image in teh queue folder, and it gets processed and displayed on teh e-ink. 
 
+### what it tests
+the image processing pipeline from user image to display
 
+pre-rec: there needs to be an image in the queue directory
+
+### Running It
+
+```
+sudo python3 test_full_pipeline.py
+```
