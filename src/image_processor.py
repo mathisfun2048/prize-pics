@@ -36,7 +36,7 @@ class ImageProcessor:
                 img = img.convert("RGB")
             
             if img.width != 400 and img.height != 300:
-                mg = self.resize_maintain_aspect(img) # implment this function later lol
+                img = self.resize_maintain_aspect(img) # implment this function later lol
                 logger.info(f"resized image") 
 
             if contrast != 1.0:
@@ -56,7 +56,7 @@ class ImageProcessor:
 
             img = img.convert("L")
 
-            img = self.apply_dithering(img, dither_mode) # implement this function later lol
+            img = self.apply_dither(img, dither_mode) # implement this function later lol
             logger.info("applied dithering")
 
             logger.info("finished processing")
@@ -74,7 +74,7 @@ class ImageProcessor:
             new_height = int(self.width / img_ratio)
         else:
             new_height = self.height
-            new_width = int(new_width * img_ratio)
+            new_width = int(self.height * img_ratio)
 
         img = img.resize((new_width, new_height), Image.LANCZOS) #LANCZOS is a resampling algorihtm that reduces pixilation
         
