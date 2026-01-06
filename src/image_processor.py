@@ -1,4 +1,4 @@
-from PIL import Image, ImageEnhance, ImageFilters
+from PIL import Image, ImageEnhance, ImageFilter
 import numpy as np
 import logging
 import os
