@@ -68,4 +68,6 @@ this on the e-ink:
 
 this on the terminal:
 
+<img width="384" height="102" alt="Screenshot 2026-01-05 at 11 17 43 PM" src="https://github.com/user-attachments/assets/8dbbfc32-da97-4e35-9804-a0576d4d5e8e" />
+
 
