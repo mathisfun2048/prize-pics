@@ -116,3 +116,26 @@ The picture that got ouputted:
 <img width="498" height="541" alt="Screenshot 2026-01-06 at 4 15 35 PM" src="https://github.com/user-attachments/assets/ea81e696-0304-4bb4-981b-22c46f8c698d" />
 
 ** picture will vary based on what you input**
+
+
+## test_slideshow.py
+
+### what it does
+Scans image directory, itterates through images, tests looping, and tests resetting
+
+makes before you test there are images in teh images/queue/ directory
+
+### running it
+
+```
+sudo python3 test_full_pipeline.py
+```
+
+### expected output:
+
+If pn teh terminal there is a 
+```
+test complete
+```
+message, it is successful. No output on e-ink in this!
+
