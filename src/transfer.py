@@ -34,7 +34,8 @@ class ImageTransfer:
 
 
     def get_processed_image(self, source_path):
-        
+
+        source_path = Path(source_path)
         cache_filename = self._get_cache_filename(source_path)
         cache_path = self.processed_dir / cache_filename
 
