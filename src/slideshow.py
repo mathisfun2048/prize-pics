@@ -23,7 +23,7 @@ class Slideshow:
             return 0
 
         self.image_list = [
-            f for f in self.image_dir.iterdir
+            f for f in self.image_dir.iterdir()
             if f.is_file() and f.suffix.lower() in valid_extensions
         ]
 
