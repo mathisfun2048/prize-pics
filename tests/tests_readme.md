@@ -139,3 +139,22 @@ test complete
 ```
 message, it is successful. No output on e-ink in this!
 
+## test_trasnfer.py
+
+### what it does
+
+tests the transfer algithm from reading from teh queue directory and processing with the processed images bieng cached adn not as files
+
+### running it
+
+```
+sudo python3 test_transfer.py
+```
+
+### expected output
+
+the following terminal message:
+```
+test complete
+```
+
