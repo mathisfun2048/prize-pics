@@ -4,3 +4,6 @@ numpy
 spidev
 gpiozero
 pillow.heif
+flask
+flask-httpauth
+
