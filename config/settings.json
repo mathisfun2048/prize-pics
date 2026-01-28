@@ -1,21 +1,25 @@
 {
-    "display": {
-        "interval_seconds": 300,
-        "loop": true
-    },
-    "processing": {
-        "dither_mode": "atkinson",
-        "contrast": 1.2,
-        "brightness": 1.0,
-        "sharpness": 1.0
-
-    },
-    "directories": {
-        "queue": "image/queue",
-        "processed": "images/processed"
-    },
-    "startup":{
-        "clear_display_on_start": true,
-        "preprocess_on_start": false
-    }
+  "display": {
+    "interval_seconds": 300,
+    "loop": true
+  },
+  "processing": {
+    "dither_mode": "atkinson",
+    "contrast": 1.2,
+    "brightness": 1.0,
+    "sharpness": 1.0
+  },
+  "button": {
+    "pin": 18,
+    "pull_up": true,
+    "debounce_ms": 300
+  },
+  "directories": {
+    "queue": "images/queue",
+    "processed": "images/processed"
+  },
+  "startup": {
+    "clear_display_on_start": true,
+    "preprocess_on_start": false
+  }
 }
