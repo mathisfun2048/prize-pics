@@ -13,7 +13,7 @@ import json
 # Add src to path
 sys.path.insert(0, os.path.dirname(__file__))
 
-from display_controller import EInkDisplay
+from display_controller import eink
 from image_processor import ImageProcessor
 from slideshow import Slideshow
 from transfer import ImageTransfer
