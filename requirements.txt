@@ -3,6 +3,7 @@ RPi.GPIO >= 0.7.1
 numpy
 spidev
 gpiozero
+lgpio
 pillow.heif
 flask
 flask-httpauth
