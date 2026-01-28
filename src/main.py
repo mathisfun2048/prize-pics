@@ -72,7 +72,7 @@ class PictureFrame:
             sharpness=self.config['processing']['sharpness']
         )
         
-        self.display = EInkDisplay()
+        self.display = eink()
         
         self.running = False
         self.interval = self.config['display']['interval_seconds']
