@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 
-<html lang = "en">
+<html lang="en">
     <head>
-        <meta charset = "UTF-8">
+        <meta charset="UTF-8">
 
-        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Prize Pics</title>
         <style>
             * {
@@ -182,7 +182,7 @@
                 font-weight: 400;
             }
 
-            input[type="file"]{
+            input[type="file"] {
                 display: none;
             }
 
@@ -222,7 +222,7 @@
 
             .btn-danger:hover {
                 background: var(--coral);
-                color: white
+                color: white;
             }
                 
             .file-selected{
@@ -294,7 +294,7 @@
         </style>
     </head>
     <body>
-        <div class = "container">
+        <div class="container">
             <header>
                 <h1>Prize Pics</h1>
             </header>
@@ -302,7 +302,7 @@
             {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
                     {% for category, message in messages %}
-                        <div class = "flash {{ category }}">{{message}} </div>
+                        <div class="flash {{ category }}">{{ message }}</div>
 
                     {% endfor %}
                 {% endif %}
@@ -310,74 +310,72 @@
 
             <!--display-->
 
-            <div class = "card">
-                <div class = "image-preview-container">
+            <div class="card">
+                <div class="image-preview-container">
                     {% if current_image %}
-                        <img src = "/current-image?t={{ range(1, 1000000) | random }}" alt = "Current Image" class = "image-preview">
+                        <img src="/current-image?t={{ range(1, 1000000) | random }}" alt="Current Image" class="image-preview">
                     {% else %}
-                        <div class = "no-image">
-                            <div class = "no-image-icon">"blah"</div>
+                        <div class="no-image">
+                            <div class="no-image-icon">"blah"</div>
                             <div>No image uploaded</div>
                 </div>
                 {% endif %}
             </div>
 
-            <div class = "current-image-name">
-                {{ current_image if current_image else "waiting"}}
+            <div class="current-image-name">
+                {{ current_image if current_image else "waiting" }}
             </div>
         </div>
 
-        <div class = "card">
-            <div class = "card-title"> upload photos </div>
+        <div class="card">
+            <div class="card-title"> upload photos </div>
 
-            <form method = "POST" action = "/upload" enctype = "multipart / form-data">
-                <lable for = "file-input">
-                    <div class = "upload-area">
-                        <div class = "upload lol">"upload"</div>
-                        <div class = "upload-hint">JPG, PNG, HEIC</div>
+            <form method="POST" action="/upload" enctype="multipart/form-data">
+                <label for="file-input">
+                    <div class="upload-area">
+                        <div class="upload lol">"upload"</div>
+                        <div class="upload-hint">JPG, PNG, HEIC</div>
                     </div>
-                </lable>
-                <input type = "file" id = "file-input" name = "files[]" multiple accept = ".jpg, .png, .heic">
+                </label>
+                <input type="file" id="file-input" name="files[]" multiple accept=".jpg, .png, .heic">
 
-                <div id = "file-selected" class = "file-selected"> </div>
+                <div id="file-selected" class="file-selected"></div>
 
-                <div style = "margin-top: 20px; text-align: center;">
-                    <button type = "submit" class = "btn btn-primary" id = "upload-btn" disabled>
+                <div style="margin-top: 20px; text-align: center;">
+                    <button type="submit" class="btn btn-primary" id="upload-btn" disabled>
                         Upload Photos
                     </button>
                 </div>
             </form>
         </div>
 
-        <div class = "card">
-            <div class = "card-title">
+        <div class="card">
+            <div class="card-title">
                 photo library!
-                <span class = "badge"> {{ image_count >> </span>
+                <span class="badge">{{ image_count }}</span>
             </div>
             {% if images %}
-                {% for image in images%}
-                <div class = "image-item {% if image == current_image %}current{% endif}">
-                    <span class = "image-name"> {{ image }} </span>
+                {% for image in images %}
+                <div class="image-item {% if image == current_image %}current{% endif %}">
+                    <span class="image-name">{{ image }}</span>
                     {% if image == current_image %}
-                    <span class = "current_image"> {{ image}}</span>
-                    {% if image == current_image %}
-                    <span class = "current-badge"> Playing </span>
+                    <span class="current-badge"> Playing </span>
                     {% endif %}
                     <a href="/delete/{{ image }}" onclick="return confirm('Delete {{ image }}?')">
 
-                        <button class = "btn btn-danger" type = "button">Delete</button>
+                        <button class="btn btn-danger" type="button">Delete</button>
 
                         </a>
                     </div>
                     {% endfor %}
                 {% else %}
-                    <div class = "empty-state">
-                        <div class = "empty-icon">bleh</div>
+                    <div class="empty-state">
+                        <div class="empty-icon">bleh</div>
                         <p>no photos yet lol</p>
                     </div>
                 {% endif %}
         </div>
-    </div>
+        </div>
 
     <script>
         const fileInput = document.getElementById("file-input");
@@ -394,5 +392,5 @@
             }
         });
     </script>
-</body>
+    </body>
 </html>
