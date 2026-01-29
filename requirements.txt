@@ -1,10 +1,11 @@
-Pillow >= 10.0.0
-RPi.GPIO >= 0.7.1
+flask
+flask
+flask-httpauth
+
+Pillow>=10.0.0
+RPi.GPIO>=0.7.1
 numpy
 spidev
 gpiozero
 lgpio
-pillow.heif
-flask
-flask-httpauth
-
+pillow-heif

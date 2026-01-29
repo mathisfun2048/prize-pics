@@ -12,7 +12,6 @@
         }
 
         :root {
-            /* Bold Color Palette */
             --coral: #F24B59;
             --blue: #41A0F2;
             --teal: #49BFAA;
@@ -248,7 +247,6 @@
             font-weight: 700;
         }
 
-        /* Image List */
         .image-item {
             display: flex;
             align-items: center;
@@ -312,8 +310,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>Paper Frame</h1>
-            <p class="subtitle">View the Queue</p>
+            <h1>Prize Pics</h1>
         </header>
         
         {% with messages = get_flashed_messages(with_categories=true) %}
@@ -323,8 +320,7 @@
                 {% endfor %}
             {% endif %}
         {% endwith %}
-        
-        <!-- Current Image Display -->
+
         <div class="card">
             <div class="card-title">Now Displaying</div>
             
@@ -346,7 +342,6 @@
             </div>
         </div>
         
-        <!-- Upload -->
         <div class="card">
             <div class="card-title">Upload Photos</div>
             
@@ -369,8 +364,7 @@
                 </div>
             </form>
         </div>
-        
-        <!-- Photo Library -->
+
         <div class="card">
             <div class="card-title">
                 Photo Library
