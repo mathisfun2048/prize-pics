@@ -48,7 +48,7 @@ class Slideshow:
         self.current_index += 1
 
         if self.current_index >= len(self.image_list):
-            if self.leeop:
+            if self.loop:
                 logger.info("looping back to start")
                 self.current_index = 0
             else:
