@@ -1,7 +1,5 @@
 flask
-flask
 flask-httpauth
-
 Pillow>=10.0.0
 RPi.GPIO>=0.7.1
 numpy
