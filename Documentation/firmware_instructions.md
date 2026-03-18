@@ -221,27 +221,27 @@ sudo reboot
 
 ## Activate Run Script
 
-'''
+```
 chmod +x run.sh
-'''
+```
 
 
 ## Test Manually
 
-'''
+```
 cd ~/prize-pics
 ./run.sh
-'''
+```
 
 
 ## Create Systemmd Service for Prize Pics (auto run hardware)
 
-'''
+```
 sudo nano /etc/systemd/system/prize-pics.service
-'''
+```
 paste the following:
 
-'''
+```
 [Unit]
 Description=E-Ink Picture Frame
 After=network.target
@@ -258,28 +258,28 @@ StandardError=journal
 
 [Install]
 WantedBy=multi-user.target
-'''
+```
 
 
 enable and start:
 
-'''
+```
 sudo systemctl daemon-reload
 sudo systemctl enable picture-frame.service
 sudo systemctl start picture-frame.service
 sudo systemctl status picture-frame.service
-'''
+```
 
 
 ## Create Systemmd Service for Web Interface (auto run web UI)
 
-'''
+```
 sudo nano /etc/systemd/system/prize-pics-web.service
-'''
+```
 
 paste the following:
 
-'''
+```
 [Unit]
 Description=Picture Frame Web Uploader
 After=network.target
@@ -296,14 +296,14 @@ StandardError=journal
 
 [Install]
 WantedBy=multi-user.target
-'''
+```
 
 enable and start:
 
-'''
+```
 sudo systemctl daemon-reload
 sudo systemctl enable picture-frame-web.service
 sudo systemctl start picture-frame-web.service
 sudo systemctl status picture-frame-web.service
-'''
+```
 
