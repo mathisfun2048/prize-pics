@@ -141,6 +141,14 @@ def skip_image():
     flash('Skipping to next image...', 'success')
     return redirect(url_for('index'))
 
+@app.route('/api/status')
+@auth.login_required
+def api_status():
+    """Return current image name as JSON for polling"""
+    current = get_current_image()
+    current_name = Path(current).name if current else None
+    return {'current_image': current_name}
+
 @app.route('/current-image')
 @auth.login_required
 def get_current_image_preview():

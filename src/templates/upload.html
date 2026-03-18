@@ -363,7 +363,8 @@
                 {% if current_image %}
                     <img src = "/current-image?t={{ range(1, 1000000) | random}}"
                         alt = "on display"
-                        class = "image-preview">
+                        class = "image-preview"
+                        id = "current-image-preview">
 
                 {% else %}
                     <div class = "no-image">
@@ -433,6 +434,33 @@
     const fileInput = document.getElementById("file-input");
     const uploadBtn = document.getElementById("upload-btn");
     const fileSelected = document.getElementById("file-selected");
+
+    // Poll for display changes every 2 seconds
+    const nameEl = document.querySelector('.current-image-name');
+    let displayedImage = nameEl ? nameEl.textContent.trim() : null;
+    if (displayedImage === 'waiting') displayedImage = null;
+
+    setInterval(async function() {
+        try {
+            const res = await fetch('/api/status');
+            const data = await res.json();
+            if (data.current_image !== displayedImage) {
+                displayedImage = data.current_image;
+                const preview = document.getElementById('current-image-preview');
+                if (data.current_image) {
+                    if (preview) {
+                        preview.src = '/current-image?t=' + Date.now();
+                    } else {
+                        // Was showing "no image" — reload to render the img element
+                        location.reload();
+                    }
+                    if (nameEl) nameEl.textContent = data.current_image;
+                } else {
+                    location.reload();
+                }
+            }
+        } catch (e) {}
+    }, 2000);
 
     fileInput.addEventListener("change", function(){
         if (this.files.length > 0) {
