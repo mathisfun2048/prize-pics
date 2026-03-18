@@ -36,3 +36,14 @@ The most important pipeline in this project is the image transformation process.
 A key design consideration is that the uploaded image is not stored locally, after it is processed it is deleted. The processed image is cached in memory. This was to ensure security. 
 
 
+## Build Instructions
+
+All build instructions can be found in hardware_instructions and firmware_instructions.md. The pcb design can be found in another one of my repos, PaperCAM. The hardware is identical between the two projects; however, the firmware is different. Use the firmware in this repo for the prize-pics functionality. 
+
+## Cost
+
+Free.99. This project is open source. 
+
+## Demo
+
+https://www.youtube.com/shorts/J4L4dThzBjg
