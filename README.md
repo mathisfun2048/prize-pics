@@ -37,6 +37,8 @@ This project does utalize a custom PCB that is listed in another one of my proje
 
 The key functionality of the software is to 1) allow photo uploads 2) see the queue 3) see a preview and 4) skip the image on view with the skip button. 
 
+<img width="535" height="653" alt="Screenshot 2026-03-18 at 5 51 15 PM" src="https://github.com/user-attachments/assets/0357b273-c963-4d6e-b0ae-ff94c0d0070d" />
+
 
 
 ## Firmware Specifics
@@ -46,6 +48,9 @@ To make this project run, there are a number of different firmware parts that wo
 The most important pipeline in this project is the image transformation process. The user uploads a full-color jpg, png, jpeg and we need to turn this into 1s, 0s that the b/w e-ink can understand. This is done through dithering that makes b/w images look greyscale to our eyes. 
 
 A key design consideration is that the uploaded image is not stored locally, after it is processed it is deleted. The processed image is cached in memory. This was to ensure security. 
+
+
+<img width="332" height="260" alt="Screenshot 2026-03-18 at 5 51 45 PM" src="https://github.com/user-attachments/assets/3b9a5168-3b0b-4012-8eb2-c4c6b709f05b" />
 
 
 ## Build Instructions
