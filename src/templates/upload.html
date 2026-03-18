@@ -375,6 +375,12 @@
             <div class = "current-image-name">
                 {{ current_image if current_image else "waiting"}}
             </div>
+
+            <div style = "margin-top: 16px; text-align: center;">
+                <form method = "POST" action = "/skip">
+                    <button type = "submit" class = "btn btn-danger">Skip</button>
+                </form>
+            </div>
         </div>
 
         <div class = "card">

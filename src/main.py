@@ -228,6 +228,13 @@ class PictureFrame:
                         logger.info("Button pressed - skipping to next image!")
                         time.sleep(0.3)  # Simple debounce - wait for release
                         break
+
+                    # Check if web UI requested a skip
+                    skip_flag = Path(__file__).parent.parent / 'skip.flag'
+                    if skip_flag.exists():
+                        logger.info("Web skip requested - skipping to next image!")
+                        skip_flag.unlink()
+                        break
                     
                     time.sleep(1)
                 

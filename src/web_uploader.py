@@ -132,6 +132,15 @@ def delete_file(filename):
     
     return redirect(url_for('index'))
 
+@app.route('/skip', methods=['POST'])
+@auth.login_required
+def skip_image():
+    """Signal the slideshow to skip to the next image"""
+    skip_flag = PROJECT_ROOT / 'skip.flag'
+    skip_flag.touch()
+    flash('Skipping to next image...', 'success')
+    return redirect(url_for('index'))
+
 @app.route('/current-image')
 @auth.login_required
 def get_current_image_preview():
