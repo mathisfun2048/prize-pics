@@ -337,6 +337,36 @@
             font-size: 21px;
             font-weight: 600;
         }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            align-items: start;
+        }
+
+        .queue-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .queue-scroll {
+            overflow-y: auto;
+            max-height: 480px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .queue-scroll .image-item:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 640px) {
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 
 </head>
@@ -355,34 +385,6 @@
                 {% endfor %}
             {% endif %}
         {% endwith %}
-
-        <div class = "card">
-            <div class = "card-title">On Display</div>
-
-            <div class = "image-preview-container">
-                {% if current_image %}
-                    <img src = "/current-image?t={{ range(1, 1000000) | random}}"
-                        alt = "on display"
-                        class = "image-preview"
-                        id = "current-image-preview">
-
-                {% else %}
-                    <div class = "no-image">
-                        <div> No Image Yet</div>
-                    </div>
-                {% endif %}
-            </div>
-
-            <div class = "current-image-name">
-                {{ current_image if current_image else "waiting"}}
-            </div>
-
-            <div style = "margin-top: 16px; text-align: center;">
-                <form method = "POST" action = "/skip">
-                    <button type = "submit" class = "btn btn-danger">Skip</button>
-                </form>
-            </div>
-        </div>
 
         <div class = "card">
             <div class = "card-title"> Upload Photos</div>
@@ -407,24 +409,62 @@
             </form>
         </div>
 
-        {% if images %}
-            {% for image in images %}
-            <div class = "image-item {% if image == current_image %}current{% endif %}">
-                <span class = "image-name"> {{ image }}</span>
-                {% if image == current_image %}
-                <span class = "current-badge"> On View</span>
-                {% endif %}
-                <a href="/delete/{{ image }}" onclick="return confirm('Delete {{ image }}?')">
-                    <button class = "btn btn-danger" type = "button"> Delete</button>
-                </a>
+        <div class = "two-col">
+            <!-- Left: Queue -->
+            <div class = "card queue-card">
+                <div class = "card-title">
+                    Queue
+                    <span class = "badge">{{ images | length }}</span>
+                </div>
+                <div class = "queue-scroll">
+                    {% if images %}
+                        {% for image in images %}
+                        <div class = "image-item {% if image == current_image %}current{% endif %}">
+                            <span class = "image-name"> {{ image }}</span>
+                            {% if image == current_image %}
+                            <span class = "current-badge"> On View</span>
+                            {% endif %}
+                            <a href="/delete/{{ image }}" onclick="return confirm('Delete {{ image }}?')">
+                                <button class = "btn btn-danger" type = "button"> Delete</button>
+                            </a>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class = "empty-state">
+                            <p> no photos uploaded yet</p>
+                        </div>
+                    {% endif %}
+                </div>
             </div>
 
-            {% endfor %}
-        {% else %}
-            <div class = "empty-state">
-                <p> no photos uploaded yet</p>
+            <!-- Right: Live Preview + Skip -->
+            <div class = "card">
+                <div class = "card-title">On Display</div>
+
+                <div class = "image-preview-container">
+                    {% if current_image %}
+                        <img src = "/current-image?t={{ range(1, 1000000) | random}}"
+                            alt = "on display"
+                            class = "image-preview"
+                            id = "current-image-preview">
+                    {% else %}
+                        <div class = "no-image">
+                            <div> No Image Yet</div>
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class = "current-image-name">
+                    {{ current_image if current_image else "waiting"}}
+                </div>
+
+                <div style = "margin-top: 16px; text-align: center;">
+                    <form method = "POST" action = "/skip">
+                        <button type = "submit" class = "btn btn-danger">Skip</button>
+                    </form>
+                </div>
             </div>
-        {% endif %}
+        </div>
 
 
 
