@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Picture Frame</title>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width", initial-scale="1.0">
+    <title>Prize Pics</title>
     <style>
         * {
             margin: 0;
@@ -20,11 +20,13 @@
             --dark: #3D3D3D;
             --white: #FFFFFF;
             --off-white: #FAFAFA;
-            --light-gray: #F5F5F7;
+            --light-gray: #F5F5F7; 
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', sans-serif;
+
+
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", sans-serif;
             background: var(--white);
             color: var(--dark);
             line-height: 1.4;
@@ -32,16 +34,24 @@
         }
 
         .container {
+
             max-width: 980px;
             margin: 0 auto;
             padding: 48px 22px 80px;
+
+
+        
         }
+
 
         header {
             text-align: center;
             margin-bottom: 52px;
             padding-top: 20px;
+
+
         }
+
 
         h1 {
             font-size: 56px;
@@ -50,20 +60,22 @@
             margin-bottom: 4px;
             letter-spacing: -1.5px;
             line-height: 1.05;
+
+
         }
+
 
         .subtitle {
-            color: #6e6e73;
+            color: var(--coral);
             font-size: 21px;
             font-weight: 400;
-            letter-spacing: 0.011em;
+            letter-spacing: 0.11em;
         }
 
-        /* Flash Messages */
         .flash {
             padding: 18px 22px;
             border-radius: 18px;
-            margin-bottom: 24px;
+            margin-bottom: 34px;
             font-size: 17px;
             font-weight: 600;
         }
@@ -74,11 +86,11 @@
         }
 
         .flash.error {
+
             background: var(--coral);
             color: white;
         }
 
-        /* Cards */
         .card {
             background: var(--light-gray);
             border-radius: 28px;
@@ -106,7 +118,7 @@
             font-weight: 700;
         }
 
-        /* Current Image Display */
+
         .image-preview-container {
             position: relative;
             width: 100%;
@@ -114,7 +126,9 @@
             background: white;
             border-radius: 18px;
             overflow: hidden;
+
         }
+
 
         .image-preview {
             position: absolute;
@@ -131,14 +145,22 @@
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
-            color: #86868b;
+            color: var(--light-gray)
+
+
         }
+
+
 
         .no-image-icon {
             font-size: 64px;
             margin-bottom: 12px;
             opacity: 0.5;
+
+
+
         }
+
 
         .no-image div {
             font-size: 21px;
@@ -153,13 +175,14 @@
             font-size: 15px;
             text-align: center;
             word-break: break-all;
-            color: #6e6e73;
+            color: var(--dark);
             font-weight: 500;
         }
 
-        /* Upload Area */
+
+
         .upload-area {
-            border: 3px dashed #d2d2d7;
+            border: 3px dashed var(--light-gray);
             border-radius: 18px;
             padding: 64px 40px;
             text-align: center;
@@ -168,9 +191,9 @@
             cursor: pointer;
         }
 
-        .upload-area:hover {
+        .uplaod-area:hover {
             border-color: var(--blue);
-            background: #f5f9ff;
+            background: var(--light-gray);
         }
 
         .upload-icon {
@@ -186,18 +209,19 @@
             letter-spacing: -0.3px;
         }
 
+
         .upload-hint {
             font-size: 17px;
-            color: #6e6e73;
+            color: var(--dark);
             font-weight: 400;
         }
 
-        input[type="file"] {
+        input[type = "file"] {
             display: none;
         }
 
         .btn {
-            padding: 16px 40px;
+            padding: 17px 40px;
             border-radius: 980px;
             border: none;
             font-size: 17px;
@@ -206,13 +230,16 @@
             transition: all 0.2s ease;
         }
 
+
         .btn-primary {
             background: var(--coral);
             color: white;
+
         }
 
+
         .btn-primary:hover:not(:disabled) {
-            background: #e03847;
+            background: var(--coral);
             transform: scale(1.02);
         }
 
@@ -221,9 +248,10 @@
         }
 
         .btn-primary:disabled {
-            background: #d2d2d7;
+            background: var(--light-gray);
             cursor: not-allowed;
             opacity: 0.5;
+
         }
 
         .btn-danger {
@@ -238,6 +266,7 @@
         .btn-danger:hover {
             background: var(--coral);
             color: white;
+
         }
 
         .file-selected {
@@ -256,8 +285,10 @@
             border-radius: 16px;
             margin-bottom: 12px;
             transition: all 0.2s ease;
+
         }
 
+        
         .image-item:hover {
             transform: scale(1.01);
         }
@@ -278,6 +309,7 @@
             font-weight: 600;
         }
 
+
         .current-badge {
             background: var(--teal);
             color: white;
@@ -292,7 +324,7 @@
         .empty-state {
             text-align: center;
             padding: 80px 20px;
-            color: #86868b;
+            color: var(--light-gray);
         }
 
         .empty-icon {
@@ -306,106 +338,107 @@
             font-weight: 600;
         }
     </style>
+
 </head>
+
 <body>
-    <div class="container">
+    <div class = "container">
         <header>
-            <h1>Prize Pics</h1>
+            <h1> Prize Pics </h1>
         </header>
-        
-        {% with messages = get_flashed_messages(with_categories=true) %}
+
+        {$ with messages = get_flashed_messages(with_catagories = true) %}
             {% if messages %}
-                {% for category, message in messages %}
-                    <div class="flash {{ category }}">{{ message }}</div>
-                {% endfor %}
+                {% for category, messge in messges %}
+                    <div class = "flash {{category }}">{{ messege }}</div>
+
+                {% end for %}
             {% endif %}
         {% endwith %}
 
-        <div class="card">
-            <div class="card-title">Now Displaying</div>
-            
-            <div class="image-preview-container">
-                {% if current_image %}
-                    <img src="/current-image?t={{ range(1, 1000000) | random }}" 
-                         alt="Current display" 
-                         class="image-preview">
+        <div class = "card">
+            <div class = "card-title">On Display</div>
+
+            <div class = "image-preview-container">
+                {% if current image %}
+                    <img src = "/current-image?t={{ range(1, 1000000) | random}}"
+                        alt = "on display"
+                        class = "image-preview">
+
                 {% else %}
-                    <div class="no-image">
-                        <div class="no-image-icon">🖼️</div>
-                        <div>No image yet</div>
+                    <div class = "no-image">
+                        <div> No Image Yet</div>
                     </div>
                 {% endif %}
             </div>
-            
-            <div class="current-image-name">
-                {{ current_image if current_image else "Waiting for first image..." }}
+
+            <div class = "current-image-name">
+                {{ current_image f current_image else "waiting"}}
             </div>
         </div>
-        
-        <div class="card">
-            <div class="card-title">Upload Photos</div>
-            
-            <form method="POST" action="/upload" enctype="multipart/form-data">
-                <label for="file-input">
-                    <div class="upload-area">
-                        <div class="upload-icon">📸</div>
-                        <div class="upload-text">Click to browse photos</div>
-                        <div class="upload-hint">JPG, PNG, or HEIC (max 20MB)</div>
+
+        <div class = "card">
+            <div class = "card-title"> Upload Photos</div>
+
+            <form method = "POST" action = "/upload" enctype = "multipart/form-data">
+                <label for = "file-input">
+                    <div class = "upload-area">
+                        <div class = "upload-text"> click here to upload photos</div>
+                        <div class = "upload-hint"> JPG, PNG, HEIC</div>
                     </div>
                 </label>
-                <input type="file" id="file-input" name="files[]" multiple accept=".jpg,.jpeg,.png,.heic">
-                
-                <div id="file-selected" class="file-selected"></div>
-                
-                <div style="margin-top: 20px; text-align: center;">
-                    <button type="submit" class="btn btn-primary" id="upload-btn" disabled>
+
+                <input type = "file" id = "file-input" name = "files[]" multiple accept = ".jpg, .jpeg, .png, .heic">
+
+                <div id = "file-selected" class = "file selected"></div>
+
+                <div style = "margin-top: 20px; text-align: center;">
+                    <buttom type = "submit" class = "btn btn-primary" id = "uplaod-btn" disabled>
                         Upload Photos
-                    </button>
+                    </buttom>
                 </div>
             </form>
         </div>
 
-        <div class="card">
-            <div class="card-title">
-                Photo Library
-                <span class="badge">{{ image_count }}</span>
+        {% if images %}
+            {% for image in images %}
+            <div class = "image-item {% if name == current_image%}current{% end if %}">
+                <spand class = "image-name"> {{ image }}</spand>
+                {% if image == current_image %}
+                <span class = "current-badge"> On View</span>
+                {% endif %}
+                <a href="/delete/{{ image }}" onclick="return confirm('Delete {{ image }}?')">
+                    <button class = "btn btn-danger" type = "button"> Delete</button>
+                </a>
             </div>
-            
-            {% if images %}
-                {% for image in images %}
-                <div class="image-item {% if image == current_image %}current{% endif %}">
-                    <span class="image-name">{{ image }}</span>
-                    {% if image == current_image %}
-                    <span class="current-badge">Playing</span>
-                    {% endif %}
-                    <a href="/delete/{{ image }}" onclick="return confirm('Delete {{ image }}?')">
-                        <button class="btn btn-danger" type="button">Delete</button>
-                    </a>
-                </div>
-                {% endfor %}
-            {% else %}
-                <div class="empty-state">
-                    <div class="empty-icon">🖼️</div>
-                    <p>No photos yet</p>
-                </div>
-            {% endif %}
-        </div>
+
+            {% endfor %}
+        {% else %}
+            <div class = "empty state">
+                <p> no photos uploaded yet</p>
+            </div>
+        {% endif %}
+
+
+
     </div>
-    
-    <script>
-        const fileInput = document.getElementById('file-input');
-        const uploadBtn = document.getElementById('upload-btn');
-        const fileSelected = document.getElementById('file-selected');
-        
-        fileInput.addEventListener('change', function() {
-            if (this.files.length > 0) {
-                uploadBtn.disabled = false;
-                fileSelected.textContent = `✓ Selected ${this.files.length} file(s)`;
-            } else {
-                uploadBtn.disabled = true;
-                fileSelected.textContent = '';
-            }
-        });
-    </script>
+</div>
+
+<script>
+    const fileInput = document.getElementById("file-input");
+    const uploadBtn = document.getElementByID("upload-btn");
+    const fileSelected = document.getElementByID("file-selected");
+
+    fileInput.addEventListener("change", function(){
+        if (this.files.length > 0) {
+            uploadBtn.disabled = false;
+            fileSelected.textContent = "selected ${this.files.length} files";
+
+        }else {
+            uploadBtn.disabled = true;
+            fileSelected.textContent = "";
+        }
+    });
+</script>
 </body>
 </html>
