@@ -451,13 +451,30 @@
                     if (preview) {
                         preview.src = '/current-image?t=' + Date.now();
                     } else {
-                        // Was showing "no image" — reload to render the img element
                         location.reload();
                     }
                     if (nameEl) nameEl.textContent = data.current_image;
                 } else {
                     location.reload();
                 }
+
+                // Update queue highlights
+                document.querySelectorAll('.image-item').forEach(function(item) {
+                    const itemName = item.querySelector('.image-name');
+                    const isCurrent = itemName && itemName.textContent.trim() === data.current_image;
+                    item.classList.toggle('current', isCurrent);
+
+                    // Add or remove the "On View" badge
+                    const existingBadge = item.querySelector('.current-badge');
+                    if (isCurrent && !existingBadge) {
+                        const badge = document.createElement('span');
+                        badge.className = 'current-badge';
+                        badge.textContent = 'On View';
+                        item.querySelector('a').insertAdjacentElement('beforebegin', badge);
+                    } else if (!isCurrent && existingBadge) {
+                        existingBadge.remove();
+                    }
+                });
             }
         } catch (e) {}
     }, 2000);
