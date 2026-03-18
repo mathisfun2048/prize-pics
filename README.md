@@ -26,6 +26,9 @@ online interface:
 As stated above, the main hardware elements are the e-ink and the rpi. Additionally is a button that allows the user to skip the image on view to the next one in the queue. 
 
 This project does utalize a custom PCB that is listed in another one of my projects. This is open source, feel free to reproduce and edit as you see fit. 
+
+
+
 <img width="849" height="834" alt="Screenshot 2026-03-18 at 5 48 54 PM" src="https://github.com/user-attachments/assets/d610bc15-f248-4b98-bf57-3f4bced010aa" />
 
 
@@ -33,6 +36,8 @@ This project does utalize a custom PCB that is listed in another one of my proje
 ## Interface Specifics
 
 The key functionality of the software is to 1) allow photo uploads 2) see the queue 3) see a preview and 4) skip the image on view with the skip button. 
+
+
 
 ## Firmware Specifics
 
