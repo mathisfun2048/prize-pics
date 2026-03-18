@@ -27,43 +27,43 @@ github -> settings -> developer settings ->  personal access tokens -> tokens ->
 
 Also, if you havn't set up your git email and name, it might prompt you to do that. Type these to set those up:
 
-'''
+```
  git config --global user.email "<YOUR EMAIL>"
 
   git config --global user.name "<YOUR NAME>"
-'''
+```
 
 ## viewing device logs
 
-'''
+```
 sudo journalctl -u prize-pics.service -f
-'''
+```
 
 ## restarting hardware service
 
-'''
+```
 sudo systemctl restart prize-pics.service
-'''
+```
 
 ## restarting web service
 
-'''
+```
 sudo systemctl restart prize-pics-web.service
-'''
+```
 
 ## check if web service is running without errors
 
-'''
+```
 ` sudo systemctl status prize-pics-web.service`
-'''
+```
 
 ## running individual tests
 
-'''
+```
 cd ~/prize-pics
 source venv/bin/activate
 python tests/<THE TEST YOU WANT>.py
-'''
+```
 ## running all tests
 
 ```
