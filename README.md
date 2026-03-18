@@ -4,6 +4,8 @@
 
 ## Overview
 
+### tldr: Kindle For Your Photos App
+
 This is an e-ink picture frame. Similar products on the market cost upwards of $200, this only costs $50 and is open source. 
 
 The e-ink module used is the waveshare 4.2" b/w and the brains is a raspberry pi zero 2w. 
