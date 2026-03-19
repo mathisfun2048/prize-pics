@@ -57,6 +57,10 @@ A key design consideration is that the uploaded image is not stored locally, aft
 
 All build instructions can be found in hardware_instructions and firmware_instructions.md. The pcb design can be found in another one of my repos, PaperCAM. The hardware is identical between the two projects; however, the firmware is different. Use the firmware in this repo for the prize-pics functionality. 
 
+
+link to gerbers: https://github.com/mathisfun2048/PaperCam/blob/main/Production/PaperCAM%20v4%20gerbers.zip
+
+
 ## Cost
 
 Free.99. This project is open source. 
